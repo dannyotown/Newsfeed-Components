@@ -112,3 +112,26 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+function articleComp(title, date, para){
+  let article = document.createElement('div');
+  article.classList.add('article');
+  
+  let titleH2 = document.createElement('h2');
+  titleH2.textContent = title;
+
+  let dateP = document.createElement('p');
+  dateP.classList.add('date')
+  dateP.textContent = date;
+
+  let span = document.createElement('span');
+  span.classList.add('expandButton');
+
+  article.appendChild(titleH2);
+  article.appendChild(dateP);
+  para.forEach(element => {
+    article.appendChild(element)
+  });
+  article.appendChild(span);
+
+  return articleComp;
+}
