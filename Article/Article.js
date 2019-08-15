@@ -133,6 +133,7 @@ function articleComp(title, date, text1,text2,text3){
 
   let span = document.createElement('span');
   span.classList.add('expandButton');
+  span.addEventListener("click", event =>{event.currentTarget.toggle('article-open')});
 
   article.appendChild(titleH2);
   article.appendChild(dateP);
